@@ -54,6 +54,8 @@
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
+// Вариант 1
+
 // Console.WriteLine("Введите X для точки А");
 // int XA = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Введите Y для точки А");
@@ -69,15 +71,26 @@
 // double number =Math.Sqrt(Math.Pow((XB-XA),2)+Math.Pow((YB-YA),2)+Math.Pow((ZB-ZA),2));
 // Console.Write("Расстояние между точаками :"+number);
 
+// Вариант 2
+
+Console.WriteLine("Введите через пробел координаты для точки А (X Y Z)");
+int[] arrA = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+Console.WriteLine("Введите через пробел координаты для точки B (X Y Z)");
+int[] arrB = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+double number =Math.Sqrt(Math.Pow((arrB[0]-arrA[0]),2)+Math.Pow((arrB[1]-arrA[1]),2)+Math.Pow((arrB[2]-arrA[2]),2));
+Console.Write("Расстояние между точаками :"+number);
+
 
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
 
-Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
-for (int i=1; i<=number; i++)
-{
- Console.Write(Math.Pow(i,3)+" "); 
-}
+// Console.WriteLine("Введите число");
+// int number = Convert.ToInt32(Console.ReadLine());
+// for (int i=1; i<=number; i++)
+// {
+//  Console.Write(Math.Pow(i,3)+" "); 
+// }
+
+
