@@ -6,47 +6,47 @@
 // // 12821 -> да
 // // 23432 -> да
 
-// Console.Write("Введите ");
-// Console.ForegroundColor = ConsoleColor.Red;
-// Console.WriteLine("пятизначное число");
-// Console.ResetColor();
-// string number = Console.ReadLine();
+Console.Write("Введите ");
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("пятизначное число");
+Console.ResetColor();
+string number = Console.ReadLine();
 // int num;
-// if ((int.TryParse(number, out num)))
-// {
-//    int cycle = number.Length/2;
-//    int i=0;
-//    int result=0;
-//    while (i<cycle)
-//    {
-//         if (number[i]==number[number.Length-1-i])
-//        {
-//        result++;
-//        }
-//        else
-//        {
-//        result=0;
-//        }
-//     i++;
-//     }
+if ((int.TryParse(number, out int num)))
+{
+   int cycle = number.Length/2;
+   int i=0;
+   int result=0;
+   while (i<cycle)
+   {
+        if (number[i]==number[number.Length-1-i])
+       {
+       result++;
+       }
+       else
+       {
+       result=0;
+       }
+    i++;
+    }
     
       
-//        if (result==number.Length/2)
-//         {
-//          Console.WriteLine(number+" являеться палиндромом ");
-//         }
-//          else
-//         {
-//         Console.WriteLine(number+" не являеться палиндромом ");
-//         }
-// }
-// else 
-//   {
-//     Console.Write("При вводе числа допущена ");
-//     Console.ForegroundColor = ConsoleColor.Red;
-//     Console.WriteLine("ОШИБКА");
-//     Console.ResetColor();
-//   }
+       if (result==number.Length/2)
+        {
+         Console.WriteLine(number+" являеться палиндромом ");
+        }
+         else
+        {
+        Console.WriteLine(number+" не являеться палиндромом ");
+        }
+}
+else 
+  {
+    Console.Write("При вводе числа допущена ");
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("ОШИБКА");
+    Console.ResetColor();
+  }
 
 
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
@@ -73,12 +73,12 @@
 
 // Вариант 2
 
-Console.WriteLine("Введите через пробел координаты для точки А (X Y Z)");
-int[] arrA = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
-Console.WriteLine("Введите через пробел координаты для точки B (X Y Z)");
-int[] arrB = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
-double number =Math.Sqrt(Math.Pow((arrB[0]-arrA[0]),2)+Math.Pow((arrB[1]-arrA[1]),2)+Math.Pow((arrB[2]-arrA[2]),2));
-Console.Write("Расстояние между точаками :"+number);
+// Console.WriteLine("Введите через пробел координаты для точки А (X Y Z)");
+// int[] arrA = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+// Console.WriteLine("Введите через пробел координаты для точки B (X Y Z)");
+// int[] arrB = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+// double number =Math.Sqrt(Math.Pow((arrB[0]-arrA[0]),2)+Math.Pow((arrB[1]-arrA[1]),2)+Math.Pow((arrB[2]-arrA[2]),2));
+// Console.Write("Расстояние между точаками :"+number);
 
 
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
